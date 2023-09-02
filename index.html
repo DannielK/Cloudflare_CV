@@ -18,6 +18,7 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -40,15 +41,20 @@
     <!-- End Header -->
 
     <!-- Home Section -->
-    <section id="home" class="d-flex flex-column justify-content-center">
-        <div class="container">
+        <!-- d-flex flex-column justify-content-center -->
+    <section id="home" class="d-flex flex-column justify-content-center"> 
+        <div id="particles-js"></div>
+        <div class="container" data-aos="zoom-in" data-aos-delay="100" id="intro">
             <h1>Danniel Kim</h1>
-            <p>I'm an aspiring Software Engineer, Web Developer, &amp; IT Specialist</p>
+            <p>I'm an aspiring <span class="typed"></span></p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/danniel-kim/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/danniel-kim/" class="linkedin" target="_blank"><i
+                        class="bx bxl-linkedin"></i></a>
                 <a href="https://github.com/DannielK" class="github" target="_blank"><i class="bx bxl-github"></i></a>
-                <a href="https://www.instagram.com/dann.kimchi/" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
-                <a href="https://www.discordapp.com/users/317798389368619008" class="discord" target="_blank"><i class="bx bxl-discord-alt"></i></a>
+                <a href="https://www.instagram.com/dann.kimchi/" class="instagram" target="_blank"><i
+                        class="bx bxl-instagram"></i></a>
+                <a href="https://www.discordapp.com/users/317798389368619008" class="discord" target="_blank"><i
+                        class="bx bxl-discord-alt"></i></a>
             </div>
         </div>
     </section>
@@ -57,7 +63,7 @@
     <main id="main">
         <!-- About Section -->
         <section id="about" class="about">
-            <div class="container">
+            <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>About</h2>
                     <p>
@@ -106,7 +112,7 @@
 
         <!-- Skills section -->
         <section id="skills" class="skills section-bg">
-            <div class="container">
+            <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Skills</h2>
                     <p>Here is a list of my skills, spanning from concepts I want to learn, am familiar with, am learning, and am relatively proficient in.</p>
@@ -297,7 +303,7 @@
 
         <!-- Resume Section -->
         <section id="resume" class="resume">
-            <div class="container">
+            <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Resume</h2>
                     <p>Below is a comprehensive list of my background and work experience</p>
@@ -361,34 +367,36 @@
 
         <!-- Contact Section -->
         <section id="contact" class="contact">
-            <div class="section-title">
-                <h2>Contact</h2>
-            </div>
-            <div class="row mt-1 justify-content-center">
-                <div class="col-lg-2">
-                    <div class="info">
-                        <div class="address">
-                            <i class="bx bx-map"></i>
-                            <h4>Location:</h4>
-                            <p>Fullerton, CA</p>
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Contact</h2>
+                </div>
+                <div class="row mt-1 justify-content-center">
+                    <div class="col-lg-3">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bx bx-map"></i>
+                                <h4>Location:</h4>
+                                <p>Fullerton, CA</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="info">
-                        <div class="email">
-                            <i class="bx bx-mail-send"></i>
-                            <h4>Email:</h4>
-                            <p>dannykm003@gmail.com</p>
+                    <div class="col-lg-3">
+                        <div class="info">
+                            <div class="email">
+                                <i class="bx bx-mail-send"></i>
+                                <h4>Email:</h4>
+                                <p>dannykm003@gmail.com</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="info">
-                        <div class="phone">
-                            <i class="bx bx-phone"></i>
-                            <h4>Call:</h4>
-                            <p>(714) 248-3990</p>
+                    <div class="col-lg-3">
+                        <div class="info">
+                            <div class="phone">
+                                <i class="bx bx-phone"></i>
+                                <h4>Call:</h4>
+                                <p>(714) 248-3990</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -422,6 +430,28 @@
         <i class="bx bx-chevrons-up"></i></a>
 
     <!-- JS Files -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/waypoints/noframework.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"
+        integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- initialize animate on scroll lib -->
+    <script>AOS.init();</script>
+
+    <!-- script for Typed element in home section -->
+    <script>
+        const typed = new Typed('.typed', {
+                strings: ['Software Engineer', 'Web Developer', 'IT Specialist'],
+                loop: true,
+                typeSpeed: 100,
+                backSpeed: 50,
+                backDelay: 2000
+            });
+    </script>
+
+    <!-- Main Js File -->
     <script src="assets/js/app.js"></script>
 </body>
 </html>
