@@ -391,6 +391,10 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about img {
+    border-radius: 10px;
+}
+
 .about .content h3 {
     font-weight: 700;
     font-size: 26px;
@@ -403,7 +407,7 @@ section {
 }
 
 .about .content ul li {
-    margin-bottom: 20px;
+    margin: 20px 0;
     display: flex;
     align-items: center;
 }
@@ -417,6 +421,10 @@ section {
     margin-right: 5px;
     color: #0563bb;
     line-height: 0;
+}
+
+.about .content p {
+    margin: 30px 0;
 }
 
 .about .content p:last-child {
