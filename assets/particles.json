@@ -8,7 +8,7 @@
             }
         },
         "color": {
-            "value": "#ffffff"
+            "value": "#64748b"
         },
         "shape": {
             "type": "edge",
@@ -26,7 +26,7 @@
             }
         },
         "opacity": {
-            "value": 0.5,
+            "value": 0.2,
             "random": false,
             "anim": {
                 "enable": true,
@@ -48,7 +48,7 @@
         "line_linked": {
             "enable": true,
             "distance": 200,
-            "color": "#ffffff",
+            "color": "#475569",
             "opacity": 0.4,
             "width": 2
         },
