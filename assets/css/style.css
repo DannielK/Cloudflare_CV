@@ -4,7 +4,7 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #e2e8f0;
-    background-color: #0f172a;
+    background-color: #1D1E1E;
 }
 
 a {
@@ -576,7 +576,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-    background: #0f172a;
+    background: #1D1E1E;
     color: #9098a0;
     font-size: 14px;
     text-align: center;
@@ -624,4 +624,77 @@ section {
 
 #footer .credits {
     font-size: 13px;
+}
+
+/*--------------------------------------------------------------
+# Swiper Cards
+
+fix for different view ports
+--------------------------------------------------------------*/
+.swiper {
+    width: 50%;
+    height: 75vh;
+}
+
+@media (max-width: 992px) {
+    .swiper {
+        width:95%;
+    }
+}
+
+.swiper-slide {
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.swiper-slide h6 {
+    margin: 3% 0;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: #0563bb;
+    scale: 75%;
+}
+
+.swiper-pagination-progressbar {
+    position: absolute;
+    bottom: 0 !important;
+    top: 74vh !important;
+    width: 70% !important;
+    margin-left: 15%
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background-color: #0563bb !important;
+}
+
+.autoplay-progress {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
 }

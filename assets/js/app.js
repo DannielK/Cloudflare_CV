@@ -147,3 +147,43 @@ if (backtotop) {
 particlesJS.load('particles-js', 'assets/particles.json', function () {
     console.log('callback - particles.js config loaded');
 });
+
+/**
+   * Swiper Cards
+   */
+const progressCircle = document.querySelector(".autoplay-progress svg");
+const progressContent = document.querySelector(".autoplay-progress span");
+
+var swiper = new Swiper(".mySwiper", {
+    effect: "creative",
+    grabCursor: true,
+    creativeEffect: {
+        prev: {
+            shadow: false,
+            translate: ["-120%", 0, -500],
+        },
+        next: {
+            shadow: false,
+            translate: ["120%", 0, -500],
+        },
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+        dynamicBullets: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    on: {
+        autoplayTimeLeft(s, time, progress) {
+            progressCircle.style.setProperty("--progress", 1 - progress);
+            progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+    }
+});
