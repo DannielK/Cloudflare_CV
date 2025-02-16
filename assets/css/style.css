@@ -694,3 +694,39 @@ fix for different view ports
     stroke-dasharray: 125.6;
     transform: rotate(-90deg);
 }
+
+/*--------------------------------------------------------------
+# Notification Banner
+--------------------------------------------------------------*/
+#notification-banner {
+    position: fixed;
+    top: 20px;
+    /* Default gap from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-link {
+    color: #0563bb;
+    /* Link color */
+    font-weight: bold;
+}
+
+.custom-link:hover {
+    color: #0678e3;
+    /* Hover color */
+    text-decoration: none;
+}
+
+/* Add more top margin for viewports smaller than md (768px) */
+@media (max-width: 769px) {
+    #notification-banner {
+        top: 50px;
+        /* Increased gap from the top */
+    }
+}
